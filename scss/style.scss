@@ -1,0 +1,207 @@
+@import '_reset';
+// для шрифтів доданих через додаток googleFonts: &display=swap
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap);
+
+.wrapper{
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.page{
+	flex: 1 1 auto;
+}
+.--container{
+	max-width: 1370px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.header {
+
+	&__container {}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		min-height: 180px;
+		align-items: center;
+	}
+
+	&__logo {
+		transition: all .4s ease;
+		margin-bottom: 7px;
+		&:hover{
+			transform: scale(1.04);
+		}
+	}
+
+	&__menu {
+		color: $secondColor;
+		font-size: 24px;
+	}
+
+	&__button {
+		display: flex;
+		min-height: 70px;
+		align-items: center;
+		text-align: center;
+		padding: 5px 55px;
+		border: 2px solid #263238;
+		border-radius: 5px;
+		color: #000000;
+		font-size: 24px;
+		line-height: 1.5;
+		transition: all .7s ease;
+
+		&:hover{
+			background-color: $secondColor;
+			color: #fff;
+		}
+	}
+}
+
+.menu {
+	display: flex;
+	&__list {
+		display: flex;
+		gap: 5px 32px;
+
+	}
+
+	&__item {
+		transition: all .3s ease;
+		&:hover {
+				text-decoration: underline;
+				color: #000000;
+			}
+	}
+
+	&__link {
+		
+	}
+}
+@media(max-width:992px){
+	.header{
+		&__logo{
+			margin-top: 9px;
+		}
+		&__menu {
+				font-size: 16px;
+				margin-top: 9px;
+			}
+		&__row {
+			min-height: 100px;
+		}
+
+		&__button {
+			font-size: 18px;
+			min-height: 50px;
+			padding: 5px 40px;
+		}
+		
+	}
+}
+@media(max-width:767px){
+	.header{
+		&__menu {
+				font-size: 16px;
+				margin-top: 9px;
+				display: none;
+				background: #F5F5F5;
+				width: 60%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin: 0;
+				justify-content: end;
+				padding: 180px 10% 0 0;
+				font-size: 36px;
+
+				&.-open {
+						display: flex;
+					}
+			}
+
+		&__button {
+			font-size: 18px;
+			min-height: 30px;
+			padding: 5px 5%;
+			z-index: 5;
+			right: 70px;
+			position: absolute;
+		}
+		&__burger{
+			position: relative;
+			width: 30px;
+			height: 17px;
+
+			&::after,
+			&::before{
+				content: '';
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: #39515E;
+				position: absolute;
+			}
+			&::after{
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&::before {
+				top: 0px;
+			}
+
+			span{
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 21px;
+				height: 3px;
+				background: #39515E;
+				border-radius: 1px;
+			}
+			
+		}
+		
+		
+	}
+	.menu{
+		&__list{
+			flex-direction: column;
+		}
+		&__item{
+			margin-bottom: 15px;
+		}
+	}
+}
+@media(max-width:425px) {
+	.header{
+		&__menu {
+		padding-top: 140px;
+		}
+		&__button{
+			margin-top: 100px;
+			right: 50px;
+			display: none;
+			&.-active{
+				display: block;
+			}
+		}
+
+	}
+	.menu{
+		&__list{
+		font-size: 30px;
+		}
+		}
+}
+@media(max-width:320px) {
+	.header__burger{
+		width: 34px;
+		height: 19px;
+	}
+}
+
