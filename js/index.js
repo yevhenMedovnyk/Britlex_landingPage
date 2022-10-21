@@ -1,20 +1,22 @@
 const burgerBtn = document.querySelector('.header__burger');
 const menuHeader = document.querySelector('.header__menu');
 const headerBtn = document.querySelector('.header__button');
+const bodyLocker = document.querySelector('body');
 
 burgerBtn.addEventListener('click', function () {
-	menuHeader.classList.toggle('--open');
-	headerBtn.classList.toggle('--active');
+	menuHeader.classList.toggle('_open');
+	headerBtn.classList.toggle('_active');
+	bodyLocker.classList.toggle('_lock');
 })
 
 document.addEventListener('click', function (e) {
 
 	const menuCloseBody = e.composedPath().includes(burgerBtn);
 	const menuCloseBodyPlusMenu = e.composedPath().includes(menuHeader);
-	console.log(e.composedPath())
 
 	if (!menuCloseBody && !menuCloseBodyPlusMenu) {
-		menuHeader.classList.remove('--open');
-		headerBtn.classList.remove('--active');
+		menuHeader.classList.remove('_open');
+		headerBtn.classList.remove('_active');
+		bodyLocker.classList.remove('_lock');
 	}
 })
