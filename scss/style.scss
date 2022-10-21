@@ -38,6 +38,8 @@ body._lock {
 		font-size: 36px;
 		line-height: 1.5;
 		color: #000000;
+		flex: 1 1 10%;
+
 		span{
 			color: #939393;
 		}
@@ -49,6 +51,7 @@ body._lock {
 	&__menu {
 		color: $secondColor;
 		font-size: 24px;
+		flex: 1 1 auto;
 	}
 
 	&__button {
@@ -65,6 +68,7 @@ body._lock {
 		transition: all .4s ease;
 		background-color: #fff;
 
+
 		&:hover{
 			background-color: $secondColor;
 			color: #fff;
@@ -74,6 +78,7 @@ body._lock {
 
 .menu {
 	display: flex;
+
 	&__list {
 		display: flex;
 		gap: 5px 32px;
@@ -182,7 +187,26 @@ body._lock {
 			background-color: #4f595e;
 		}
 }
+
+
+//---------------------------SKILLS
+
+
 .skills {
+	padding-bottom: 282px;
+		@media (max-width: 992px){
+			padding-bottom: 106px;
+		}
+		@media (max-width: 767px){
+			padding-bottom: 52px;
+		}
+		@media (max-width: 576px){
+			padding-bottom: 84px;
+		}
+		@media (max-width: 320px){
+			padding-bottom: 50px;
+		}
+		
 
 	&__title {
 		margin-bottom: 92px;
@@ -277,7 +301,11 @@ body._lock {
 	border-radius: 10px;
 
 	&__image {
-		
+		transition: all .4s ease ;
+
+		&:hover{
+			transform: scale(1.04);
+		}
 	}
 	
 	&__body {
@@ -493,13 +521,14 @@ body._lock {
 		&__logo{
 			font-size: 30px;
 			margin-top: 9px;
-			flex: 1 1 15%;
+			flex: 1 1 10%;
 		}
 		&__menu {
 			z-index: 5;
 			font-size: 16px;
 			margin-top: 9px;
 			margin-right: 30px;
+			flex: 1 1 auto;
 		}
 		&__row {
 			min-height: 100px;
@@ -789,5 +818,180 @@ body._lock {
 	}
 }
 
+//----------------------------About Us--------------------
 
+.page__about{
+	padding-bottom: 188px;
+
+	@media (max-width: 992px) {
+		padding-bottom: 101px;
+	}
+	@media (max-width: 767px) {
+		padding-bottom: 93px;
+	}
+	@media (max-width:652px) {
+		padding-bottom: 130px;
+	}
+	@media (max-width:447px) {
+		padding-bottom: 84px;
+	}
+}
+.about {
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 30px;
+
+		@media (max-width:652px) {
+			flex-direction: column-reverse;
+			align-items: center;
+			text-align: center;
+		}
+	}
+}
+
+.content-about {
+
+	&__body {
+		flex: 0 1 50%;
+
+		@media (max-width:696px) {
+			flex: 0 1 65%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 23px;
+
+		@media (max-width: 992px) {
+			margin-bottom: 25px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 19px;
+		}
+		@media (max-width:652px) {
+			display: none;
+		}
+	}
+
+	&__title-img{
+		display: none;
+		@media (max-width:652px) {
+				display: block;
+				margin-bottom: 33px;
+			}
+		@media (max-width:447px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 35px;
+		max-width: 635px;
+
+		@media (max-width: 992px) {
+			font-size: 16px;
+			margin-bottom: 28px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 14px;
+			margin-bottom: 18px;
+		}
+		@media (max-width:652px) {
+			font-size: 14px;
+			margin-bottom: 40px;
+		}
+		@media (max-width:447px) {
+			font-size: 13px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__counter {
+		display: flex;
+		justify-content: space-between;
+		max-width: 635px;
+
+		@media (max-width:652px) {
+			justify-content: space-around;
+			
+		}
+		@media (max-width:447px) {
+			flex-direction: column;
+			min-height: 297px;
+			justify-content: space-between;
+
+
+		}
+	}
+
+	&__counter-wrapper {
+		text-align: center;
+	}
+
+	&__quantity {
+		font-size: 48px;
+		line-height: 1.666;
+		font-weight: 600;
+		color: $secondColor;
+		align-items: center;
+
+		@media (max-width: 992px) {
+				font-size: 30px;
+			}
+		@media (max-width: 767px) {
+			font-size: 22px;
+		}
+		@media (max-width:652px) {
+			font-size: 24px;
+		}
+		@media (max-width:447px) {
+			font-size: 24px;
+		}
+	}
+
+	&__value {
+		@media (max-width: 992px) {
+				font-size: 16px;
+			}
+		@media (max-width: 767px) {
+			font-size: 13px;
+		}
+		@media (max-width:652px) {
+			font-size: 14px;
+		}
+		@media (max-width:447px) {
+			font-size: 13px;
+		}
+	}
+
+	&__image {
+
+		max-width: 500px;
+		max-height: 500px ;
+		padding-top: 30px;
+
+		@media (max-width: 992px) {
+			max-width: 336px;
+			max-height: 336px;
+			}
+		@media (max-width: 767px) {
+			max-width: 295px;
+			max-height: 295px;
+		}
+		@media (max-width:696px) {
+			flex: 0 1 35%;
+		}
+		@media (max-width:652px) {
+			padding-top: 0;
+			max-width: 352px;
+			max-height: 352px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:447px) {
+			margin-bottom: 23px;
+		}
+	}
+}
 
