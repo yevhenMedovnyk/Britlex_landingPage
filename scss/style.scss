@@ -203,7 +203,7 @@ body._lock {
 		@media (max-width: 576px){
 			padding-bottom: 84px;
 		}
-		@media (max-width: 320px){
+		@media (max-width: 360px){
 			padding-bottom: 50px;
 		}
 		
@@ -359,7 +359,7 @@ body._lock {
 		@media (max-width:992px) {
 				font-size: 14px;
 				p {
-					margin-bottom: 30px;
+					margin-bottom: 30px; 
 				}
 			}
 		@media (max-width:767px) {
@@ -811,7 +811,7 @@ body._lock {
 		}
 	}
 }
-@media(max-width:320px) {
+@media(max-width:360px) {
 	.header__burger {
 		width: 34px;
 		height: 19px;

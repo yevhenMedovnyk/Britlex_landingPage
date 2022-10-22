@@ -314,7 +314,7 @@ body._lock {
     padding-bottom: 84px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .skills {
     padding-bottom: 50px;
   }
@@ -938,7 +938,7 @@ body._lock {
     padding: 5px 99px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .header__burger {
     width: 34px;
     height: 19px;
