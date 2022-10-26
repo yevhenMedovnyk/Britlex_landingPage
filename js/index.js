@@ -3,6 +3,8 @@ const menuHeader = document.querySelector('.header__menu');
 const headerBtn = document.querySelector('.header__button');
 const bodyLocker = document.querySelector('body');
 
+
+
 burgerBtn.addEventListener('click', function () {
 	menuHeader.classList.toggle('_open');
 	headerBtn.classList.toggle('_active');
@@ -20,3 +22,5 @@ document.addEventListener('click', function (e) {
 		bodyLocker.classList.remove('_lock');
 	}
 })
+
+
