@@ -4,4 +4,4 @@
 - SASS
 - JavaScript
 
-The result is here: [GitHub Pages](https://yevhenmedovnyk.github.io/britlex_landing-portfolio/)
+The result is here: [GitHub Pages](https://yevhenmedovnyk.github.io/Britlex_landing-portfolio/)
